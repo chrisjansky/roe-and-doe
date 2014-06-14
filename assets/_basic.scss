@@ -1,0 +1,164 @@
+a {text-decoration: none; color: #808185; display: block; }
+html {height: 100%; width: 100%; }
+body {margin: 0; font-family: 'liebe_ruthregular'; _background: #f1f1f3; background: white; }
+
+#menu {width: 277px; height: 100%; background: url('../images/menu_bg.jpg'); float: left; min-height: 800px; }
+#menu_up {width: 100%; height: 289px; background: url('../images/menu_top_bg.jpg') no-repeat; overflow: auto;
+	a {text-align: center; padding: 1em 0; margin-top: 3.5em; }
+	}
+
+#menu_down {width: 170px;
+	// font-size: 15px;
+	font-family: 'liebe_ruthmedium'; color: #362219; } 
+#menu_down a {
+	// font-size: 15px;
+	font-family: 'liebe_ruthmedium'; color: #362219;
+	}
+#menu_entries {margin-top: 50px; }
+#menu_entries a {margin-top: -20px; }
+#basket {position: fixed; bottom: 45px; }
+#language {position: fixed; bottom: 15px; width: 72px}
+#english {float: left; background: url('../images/ramik_vyznacenie-jazyka.png') no-repeat; width: 36px; height: 26px;
+	text-align: center; line-height: 26px; }
+#slovak {float: left; width: 36px; height: 26px; text-align: center; line-height: 26px; }
+
+#content {height: 100%; background: url('../images/background.png'); float: left; min-height: 800px}
+#make_outfit {cursor: pointer; background: url('../images/play_button.png'); width: 207px; height: 81px; position: absolute; margin-left: 40px; margin-top: 40px}
+#skip {cursor: pointer; background: url('../images/skip_button.png'); width: 207px; height: 81px; position: absolute; margin-left: 756px; margin-top: 40px}
+#head {width: 228px; height: 307px; background: url('../images/doe_hlava.png'); background-size: cover; position: absolute; z-index: 1; margin-left: 340px; margin-top: 70px}
+#bryle {width: 155px; height: 66px; background: url('../images/glasses.png'); background-size: cover; position: absolute; z-index: 3; margin-left: 40px; margin-top: 73px}
+#outfit {width: 306px; height: 540px; cursor: pointer; background: url('../images/outfit.png'); background-size: cover; position: absolute; z-index: 2; margin-top: 260px; margin-left: 351px}
+#podmenu_game_shortcut {width: 56px; height: 38px; background: url('../images/podmenu_button.png'); position: absolute; cursor: pointer; margin-top: 126px; margin-left: 40px}
+#podmenu_game {width: 230px; height: 272px; background: url('../images/podmenu_rozbalene_bez-textu.png'); position: absolute; margin-top: 162px; margin-left: 40px; line-height: 45px; text-align: center}
+.podmenu_game_entry {font-size: 15px; font-family: 'liebe_ruthregular'; color: #362219; width: 230px; height: 45px; cursor: pointer}
+.podmenu_twoline {margin-top: -8px; margin-left: -115px; position: absolute; width: 230px; text-align: center; font-size: 15px; font-family: 'liebe_ruthregular'; color: #362219}
+.podmenu_twoline2 {margin-top: 6px; margin-left: -115px; position: absolute; width: 230px; text-align: center; font-size: 15px; font-family: 'liebe_ruthregular'; color: #362219}
+#change_bg_left {margin-top: 9px; margin-left: 20px; width: 25px; height: 25px; background: url('../images/background_button.png'); position: absolute; z-index: 10}
+#change_bg_right {margin-top: 9px; margin-left: 190px; width: 25px; height: 25px; background: url('../images/background_button_right.png'); position: absolute; z-index: 10}
+.podmenu_share_entry {cursor: pointer; float: left; width: 50px; height: 35px}
+#twitter {background: url('../images/twitter_tlacitko.png') center center no-repeat; margin-left: 15px}
+#pinterst {background: url('../images/pinterest_button.png') center center no-repeat}
+#fb {background: url('../images/facebook_button.png') center center no-repeat}
+#gplus {background: url('../images/google_button.png') center center no-repeat}
+#outfit_button {width: 212px; height: 145px; background: url('../images/outfit_button.png'); cursor: pointer; position: absolute; margin-left: 691px; margin-top: 580px}
+.game-buttons {width: 40px; height: 40px; position: absolute; cursor: pointer; z-index: 4}
+#bryle_left {background: url('../images/left_button.png'); margin-top: 157px; margin-left: 325px}
+#bryle_right {background: url('../images/right_button.png'); margin-top: 157px; margin-left: 555px}
+#outfit_left {background: url('../images/left_button.png'); margin-top: 450px; margin-left: 290px}
+#outfit_right {background: url('../images/right_button.png'); margin-top: 450px; margin-left: 665px}
+
+#podmenu_game_shortcut, #podmenu_game, .game-buttons, #outfit_button {visibility: hidden}
+
+#contact-us {background: white; width: 100%; margin-top: 130px}
+#contact-left {height: 100%; margin-left: 40px; width: 440px; float: left}
+#contact-right {height: 100%; margin-right: 40px; width: 440px; float: right; background: url(../img/line.png) left 54px no-repeat; padding-left: 20px;}
+#contact-button {background-image: url('../images/contact-us_button.png'); width: 234px; height: 74px; margin-top: 50px}
+#contact-text {line-height: 24px; font-size: 17px; font-family: 'liebe_ruthlight'; color: #362219; margin-top: 30px}
+
+#contact-text2-wrapper {
+	width: 100%;
+	background: url(../img/veronika_img.png) right 15px no-repeat;
+	overflow: hidden;
+	padding-top: 15px;
+}
+#contact-text2 {line-height: 24px; font-size: 17px; font-family: 'liebe_ruthlight'; color: #362219; width: 260px;}
+
+	#contact-text2 span a, #contact-text3 span a {
+		color: #53b164 !important;
+		float: left;
+		font-size: 16px !important;
+	}
+	
+	
+	#contact-text2 span a:before, #contact-text3 span a:before {
+    	content: url(../img/znak_1.png); float: left; margin-top: -5px; margin-right: 2px;
+    	padding-top: 10px;
+    }
+    
+    #contact-text2 span:after, #contact-text3 span:after {
+    	content: url(../img/znak_2.png); float: left; margin-top: -6px; margin-left: 3px;
+    	padding-top: 10px;
+    }
+
+#contact-text3-wrapper {
+	width: 100%;
+	background: url(../img/alexandra.png) right 15px no-repeat;
+	overflow: hidden;
+	padding-top: 15px;
+}
+#contact-text3 {line-height: 24px; font-size: 17px; font-family: 'liebe_ruthlight'; color: #362219; width: 260px;}
+
+#mail_add, #mail_subj, #mail_mess {height: 43px; background: url('../images/policko_1.png'); font-size: 17px; font-family: 'liebe_ruthlight'; color: #362219; width: 403px; float: right; margin-top: 20px; text-align: center}
+#mail_add {margin-top: 50px}
+#mail_mess {height: 223px; background: url('../images/policko_2.png')}
+#mail_submit {width: 402px; height: 42px; background: url('../images/submit_button.png'); cursor: pointer; float: right; margin-top: 25px}
+
+#story-button {background-image: url('../images/story_nadpis.png'); width: 234px; height: 74px; margin-top: 50px}
+
+#story-button2 {background-image: url('../images/veronika_nadpis.png'); width: 223px; height: 67px; margin-top: 54px}
+
+#story-button3 {background-image: url('../images/alexandra_nadpis.png'); width: 222px; height: 67px; margin-top: 20px}
+
+#blog {width: 894px; height: 568px; background: url('../images/peng.png'); margin-left: 55px}
+#music {float: right; background: url('../images/prehravac_text.png'); cursor: pointer; margin-top: 75px; width: 184px; height: 143px}
+#blog_fb, #blog_tw, #blog_pin, #blog_g {width: 35px; height: 35px; position: absolute; margin-top: 310px; margin-left: 720px; cursor: pointer}
+#blog_tw {margin-left: 765px}
+#blog_pin {margin-left: 810px}
+#blog_g {margin-left: 853px}
+#text_blog {position: absolute; line-height: 24px; font-size: 16px; text-align:justify; font-family: 'liebe_ruthlight'; color: #362219; width: 580px; margin-top: 76px; margin-left: 110px}
+#liska {position: absolute; margin-left: 275px; margin-top: 370px; background: url('../images/img_liska.png'); width: 330px; height: 240px}
+
+#search {width: 830px; height: 56px; background: url('../images/vyhladavac_obrys.png'); cursor: pointer; margin-left: 35px; margin-bottom: 15px; text-align: center; margin-top: 30px; line-height: 56px; font-size: 15px; font-family: 'liebe_ruthmedium'; color: #362219;}
+.shop_item {float: left; height: 187px; width: 187px; cursor: pointer; margin-left: 30px; margin-top: 30px; line-height: 20px; font-size: 15px; font-family: 'liebe_ruthregular'; color: #362219;}
+.shop_item_img {width: 187px; height: 65px; background: url('../images/img_11_color.jpg'); padding-top: 122px}
+.shop_item_img:hover {background: url('../images/img_11.jpg'); }
+.red_pruh_item {height: 65px; width: 100%; background: #e94a43; }
+.item_name {width: 85px; margin-left: 15px; margin-top: 12px; float: left; color: white; line-height: 20px; font-size: 11px; font-family: 'liebe_ruthregular';}
+.item_details {width: 72px; margin-right: 15px; margin-top: 12px;  float: right; text-align: right; color: black; line-height: 20px; font-size: 11px; font-family: 'liebe_ruthregular';}
+#kat {background: url('../images/pohyblive_kategorie_bez-textu.png'); cursor: default; padding-top: 10px; height: 177px}
+#kat a {line-height: 24px; font-size: 15px; font-family: 'liebe_ruthregular'; color: #362219; margin-left: 30px}
+#wrapper_items {margin-left: 50px; height: 100%; overflow-y: auto; overflow-x: hidden}
+.green_pruh_item {background: #53b164; height: 65px; width: 100%}
+#kat_hot {background: url('../images/bestsellers_menu.png'); cursor: default; padding-top: 10px; height: 177px}
+#kat_hot a {line-height: 40px; font-size: 15px; font-family: 'liebe_ruthregular'; color: #362219; text-align: center}
+
+::-webkit-input-placeholder {
+   font-size: 15px; font-family: 'liebe_ruthmedium'; color: #362219;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   font-size: 15px; font-family: 'liebe_ruthmedium'; color: #362219;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   font-size: 15px; font-family: 'liebe_ruthmedium'; color: #362219; 
+}
+
+:-ms-input-placeholder {  
+   font-size: 15px; font-family: 'liebe_ruthmedium'; color: #362219; 
+}
+
+#item_closed_in {margin-top: 60px; width: 800px; background: url('../images/menu_bg.jpg'); height: 650px; padding-top: 50px; padding-left: 50px; padding-right: 50px}
+#item_closed_in_left {width: 332px; float: left; height: 374px}
+#item_closed_in_right {width: 371px; float: right; height: 374px}
+#item_closed_in_right_x {height: 374px; float: right; width: 10px; background: url('../images/cross.png') no-repeat left top; cursor: pointer}
+#item_closed_in_right_left {float: left; width: 361px; }
+#item_closed_in_right_left_nadpis {width: 218px; height: 65px; float: left; background: url('../images/sign.png') no-repeat}
+#item_closed_in_right_left_text {margin-top: 15px; width: 361px; height: 263px; float: left; background: url('../images/text.png') no-repeat}
+#butt_zoom_in {height: 27px; width: 27px; background: url('../images/button_zoom.png'); float: left}
+#butt_zoom_out {height: 27px; width: 27px; background: url('../images/button_zoom_2.png'); float: right}
+
+#arr_left {width: 10px; height: 20px; margin-top: 3px; background: url('../images/arrow_left.png'); float: left; margin-left: 90px}
+
+#cislovanie {width: 39px; height: 32px; background: url('../images/cislovanie.png'); float: left; margin-left: 22px}
+
+#arr_right{width: 10px; height: 20px; margin-top: 3px; background: url('../images/arrow_right.png'); float: right; margin-right: 90px}
+
+#thing_nummer_zehn {width: 800px; height: 88px; float: left; margin-top: 25px}
+#add_comment {width: 329px; height: 87px; background: url('../images/add_comment.png'); float: left; padding-left: 5px}
+#tri_veci {width: 401px; height: 88px; background: url('../images/button_menu.png'); float: right}
+
+#thing_nummer_elf {width: 800px; height: 133px; float: left; margin-top: 35px}
+#elf_submit {width: 179px; height: 34px; background: url('../images/submit.png'); float: left; margin-left: 77px}
+#elf_basket {width: 133px; height: 44px; background: url('../images/basket_total.png'); float: left; margin-left: 142px}
+#elf_goto {width: 171px; height: 29px; background: url('../images/go_to_basket.png'); float: right}

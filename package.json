@@ -1,0 +1,22 @@
+{
+  "name": "roeanddoe",
+  "version": "0.0.0",
+  "description": "Vintage brand.",
+  "main": "index.php",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "BSD-2-Clause",
+  "devDependencies": {
+    "grunt": "latest",
+    "grunt-contrib-connect": "latest",
+    "grunt-contrib-jade": "latest",
+    "grunt-contrib-sass": "latest",
+    "grunt-contrib-watch": "latest",
+    "grunt-php": "latest",
+    "matchdep": "latest",
+    "node-bourbon": "latest",
+    "node-neat": "latest"
+  }
+}
