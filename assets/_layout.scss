@@ -1,0 +1,95 @@
+$grid-columns: 12;
+$portrait-col: 6;
+$phone-col: 2;
+
+$desktop: new-breakpoint(min-width em(1024));
+$mobile: new-breakpoint(max-width em(1023));
+$tablet: new-breakpoint(max-width em(1023) min-width em(581));
+
+$tablet-landscape: new-breakpoint(max-width em(1023) min-width em(769));
+$tablet-portrait: new-breakpoint(max-width em(768) min-width em(581), $portrait-col);
+
+$tablet-portrait--before: new-breakpoint(min-width em(769), $grid-columns);
+$tablet-portrait--from: new-breakpoint(max-width em(768));
+
+$phone--before: new-breakpoint(min-width em(581));
+$phone: new-breakpoint(max-width em(580));
+$phone-landscape: new-breakpoint(max-width em(580) min-width em(321), $phone-col);
+$phone-portrait--before: new-breakpoint(min-width em(321));
+$phone-portrait: new-breakpoint(max-width em(320));
+
+@include media($desktop) {
+	body {min-height: 760px; overflow-y: scroll; }
+	#menu {width: 277px; bottom: 0; position: fixed; left: 0; top: 0; z-index: 20; }
+	#menu_up a {width: 100%; height: 289px; box-sizing: border-box; margin-top: 3.5em; }
+
+	#content {min-height: 100%; margin-left: 277px; }
+
+	.l-container {height: 100%; }
+	.l-fixed-nav {
+		position: fixed; bottom: 2.5em; left: em(100);
+	}
+	#wrapper_items, #contact-us {padding: 1.5em 2em; }
+}
+
+@include media($mobile) {
+	#menu_up a {margin-top: 1em; }
+	#content {min-height: 760px; }
+	.l-fixed-nav {
+		text-align: center; border-top: 1px solid rgba(tan, .75); padding: 1em 0; margin-top: 1em;
+		br {display: none; }
+	}
+	#basket {display: inline-block; }
+	#language {display: inline-block; margin-left: 1.5em; }
+}
+
+@include media($tablet-portrait--before) {
+	#item_closed_in_left {float: left; max-width: 332px; }
+	#item_closed_in_right {padding-left: 1.5em; }
+	#contact-left {width: 49%; float: left; }
+	#contact-right {width: 49%; float: right; background: url(../images/line.png) left 54px no-repeat; padding-left: 20px;
+		box-sizing: border-box; }
+}
+
+@include media($tablet-portrait--from) {
+	#item_closed_in_right {margin-top: 1em; }
+}
+
+@include media($tablet-portrait) {
+	#bryle_left {left: 22.5%; }
+	#bryle_right {right: 25%; }
+	#outfit_left {left: 10%; }
+	#outfit_right {right: 10%; }
+}
+
+@include media($tablet) {
+	#menu {
+		@include clearfix;
+	}
+	#menu_up {float: left; width: 25%; min-width: 130px; }
+	#menu_down {padding-top: 1.75em; }
+	#menu_entries {
+		a {display: inline-block; }
+		a + a {margin-left: 1em; }
+		}
+	#item_closed_in {padding: 2em; padding-bottom: 0; }
+	#wrapper_items, #contact-us {padding: 1.25em 1.5em; }
+}
+
+@include media($phone--before) {
+	#elf_submit {float: left; }
+	#elf_goto {float: right; }
+	#music {float: right; margin-top: 75px; }
+	#contact-text2-wrapper, #contact-text3-wrapper {padding-right: 150px; }
+	#mail_add, #mail_subj, #mail_mess {max-width: 403px; }
+	#mail_submit {max-width: 402px; }
+}
+
+@include media($phone) {
+	#music {display: none; }
+	#item_closed_in {padding: 1em; padding-bottom: 0; }
+	.game-buttons, #make_outfit, #outfit_button, #podmenu_game, #podmenu_game_shortcut, #skip {display: none; }
+	#wrapper_items, #contact-us {padding: 1em; }
+	#contact-text2-wrapper, #contact-text3-wrapper {background-position: center 20px; padding-top: 220px;}
+	#story-button2, #story-button3 {margin-left: auto; margin-right: auto; }
+}

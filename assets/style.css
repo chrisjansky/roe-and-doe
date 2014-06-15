@@ -41,60 +41,57 @@ body {
   font-family: 'liebe_ruthregular';
   _background: #f1f1f3;
   background: white;
+  height: 100%;
 }
 
 #menu {
-  width: 277px;
-  height: 100%;
   background: url("../images/menu_bg.jpg");
-  float: left;
-  min-height: 800px;
+}
+#menu a {
+  font-family: 'liebe_ruthmedium';
+  color: #362219;
 }
 
 #menu_up {
-  width: 100%;
-  height: 289px;
   background: url("../images/menu_top_bg.jpg") no-repeat;
-  overflow: auto;
+  overflow: hidden;
 }
 #menu_up a {
   text-align: center;
   padding: 1em 0;
-  margin-top: 3.5em;
 }
 
 #menu_down {
-  width: 170px;
   font-family: 'liebe_ruthmedium';
   color: #362219;
-}
-
-#menu_down a {
-  font-family: 'liebe_ruthmedium';
-  color: #362219;
+  text-align: center;
 }
 
 #menu_entries {
-  margin-top: 50px;
+  display: inline-block;
 }
 
 #menu_entries a {
-  margin-top: -20px;
+  margin-bottom: .25em;
 }
 
-#basket {
-  position: fixed;
-  bottom: 45px;
+input, textarea {
+  border: 0;
 }
 
-#language {
-  position: fixed;
-  bottom: 15px;
-  width: 72px;
+input:focus, textarea:focus {
+  outline: 0;
+}
+
+p {
+  line-height: 1.5;
+}
+
+#language a {
+  display: inline-block;
 }
 
 #english {
-  float: left;
   background: url("../images/ramik_vyznacenie-jazyka.png") no-repeat;
   width: 36px;
   height: 26px;
@@ -103,7 +100,6 @@ body {
 }
 
 #slovak {
-  float: left;
   width: 36px;
   height: 26px;
   text-align: center;
@@ -111,10 +107,9 @@ body {
 }
 
 #content {
-  height: 100%;
   background: url("../images/background.png");
-  float: left;
-  min-height: 800px;
+  position: relative;
+  overflow: hidden;
 }
 
 #make_outfit {
@@ -123,7 +118,7 @@ body {
   width: 207px;
   height: 81px;
   position: absolute;
-  margin-left: 40px;
+  left: 5%;
   margin-top: 40px;
 }
 
@@ -133,7 +128,7 @@ body {
   width: 207px;
   height: 81px;
   position: absolute;
-  margin-left: 756px;
+  right: 5%;
   margin-top: 40px;
 }
 
@@ -142,10 +137,11 @@ body {
   height: 307px;
   background: url("../images/doe_hlava.png");
   background-size: cover;
-  position: absolute;
   z-index: 1;
-  margin-left: 340px;
-  margin-top: 70px;
+  position: absolute;
+  left: 50%;
+  margin-left: -128px;
+  bottom: 380px;
 }
 
 #bryle {
@@ -160,15 +156,17 @@ body {
 }
 
 #outfit {
-  width: 306px;
-  height: 540px;
+  width: 376px;
+  height: 500px;
   cursor: pointer;
-  background: url("../images/outfit.png");
-  background-size: cover;
+  background-image: url("../images/outfit_new_1.png");
   position: absolute;
+  background-position: center top;
+  background-repeat: no-repeat;
   z-index: 2;
-  margin-top: 260px;
-  margin-left: 351px;
+  left: 50%;
+  margin-left: -188px;
+  bottom: 0;
 }
 
 #podmenu_game_shortcut {
@@ -177,8 +175,8 @@ body {
   background: url("../images/podmenu_button.png");
   position: absolute;
   cursor: pointer;
-  margin-top: 126px;
-  margin-left: 40px;
+  margin-top: 140px;
+  left: 5%;
 }
 
 #podmenu_game {
@@ -186,8 +184,8 @@ body {
   height: 272px;
   background: url("../images/podmenu_rozbalene_bez-textu.png");
   position: absolute;
-  margin-top: 162px;
-  margin-left: 40px;
+  margin-top: 188px;
+  left: 5%;
   line-height: 45px;
   text-align: center;
 }
@@ -273,8 +271,8 @@ body {
   background: url("../images/outfit_button.png");
   cursor: pointer;
   position: absolute;
-  margin-left: 691px;
-  margin-top: 580px;
+  right: 5%;
+  bottom: 3em;
 }
 
 .game-buttons {
@@ -283,33 +281,35 @@ body {
   position: absolute;
   cursor: pointer;
   z-index: 4;
+  padding: 1.5em;
+  background-repeat: no-repeat;
 }
 
 #bryle_left {
-  background: url("../images/left_button.png");
-  margin-top: 157px;
-  margin-left: 325px;
+  background-image: url("../images/left_button.png");
+  bottom: 70%;
+  left: 32.5%;
 }
 
 #bryle_right {
-  background: url("../images/right_button.png");
-  margin-top: 157px;
-  margin-left: 555px;
+  background-image: url("../images/right_button.png");
+  bottom: 70%;
+  right: 35%;
 }
 
 #outfit_left {
-  background: url("../images/left_button.png");
-  margin-top: 450px;
-  margin-left: 290px;
+  background-image: url("../images/left_button.png");
+  bottom: 25%;
+  left: 20%;
 }
 
 #outfit_right {
-  background: url("../images/right_button.png");
-  margin-top: 450px;
-  margin-left: 665px;
+  background-image: url("../images/right_button.png");
+  bottom: 25%;
+  right: 20%;
 }
 
-#podmenu_game_shortcut, #podmenu_game, .game-buttons, #outfit_button {
+#podmenu_game, .game-buttons, #outfit_button {
   visibility: hidden;
 }
 
@@ -317,22 +317,24 @@ body {
   background: white;
   width: 100%;
   margin-top: 130px;
+  min-height: 640px;
+}
+#contact-us:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 #contact-left {
-  height: 100%;
-  margin-left: 40px;
-  width: 440px;
-  float: left;
+  margin-top: 50px;
 }
 
-#contact-right {
-  height: 100%;
-  margin-right: 40px;
-  width: 440px;
-  float: right;
-  background: url(../img/line.png) left 54px no-repeat;
-  padding-left: 20px;
+#contact-right span {
+  min-width: 240px;
+  display: block;
+}
+#contact-right form {
+  text-align: center;
 }
 
 #contact-button {
@@ -352,7 +354,7 @@ body {
 
 #contact-text2-wrapper {
   width: 100%;
-  background: url(../img/veronika_img.png) right 15px no-repeat;
+  background: url(../images/veronika_img.png) right 15px no-repeat;
   overflow: hidden;
   padding-top: 15px;
 }
@@ -362,7 +364,7 @@ body {
   font-size: 17px;
   font-family: 'liebe_ruthlight';
   color: #362219;
-  width: 260px;
+  min-height: 170px;
 }
 
 #contact-text2 span a, #contact-text3 span a {
@@ -372,7 +374,7 @@ body {
 }
 
 #contact-text2 span a:before, #contact-text3 span a:before {
-  content: url(../img/znak_1.png);
+  content: url(../images/znak_1.png);
   float: left;
   margin-top: -5px;
   margin-right: 2px;
@@ -380,7 +382,7 @@ body {
 }
 
 #contact-text2 span:after, #contact-text3 span:after {
-  content: url(../img/znak_2.png);
+  content: url(../images/znak_2.png);
   float: left;
   margin-top: -6px;
   margin-left: 3px;
@@ -389,7 +391,7 @@ body {
 
 #contact-text3-wrapper {
   width: 100%;
-  background: url(../img/alexandra.png) right 15px no-repeat;
+  background: url(../images/alexandra.png) right 15px no-repeat;
   overflow: hidden;
   padding-top: 15px;
 }
@@ -399,19 +401,18 @@ body {
   font-size: 17px;
   font-family: 'liebe_ruthlight';
   color: #362219;
-  width: 260px;
+  min-height: 170px;
 }
 
 #mail_add, #mail_subj, #mail_mess {
   height: 43px;
-  background: url("../images/policko_1.png");
+  background: url("../images/policko_1.png") no-repeat center top;
   font-size: 17px;
   font-family: 'liebe_ruthlight';
   color: #362219;
-  width: 403px;
-  float: right;
-  margin-top: 20px;
-  text-align: center;
+  margin: 20px auto 0;
+  width: 100%;
+  padding-left: 1em;
 }
 
 #mail_add {
@@ -420,15 +421,14 @@ body {
 
 #mail_mess {
   height: 223px;
-  background: url("../images/policko_2.png");
+  background: url("../images/policko_2.png") no-repeat center top;
 }
 
 #mail_submit {
-  width: 402px;
+  width: 100%;
   height: 42px;
-  background: url("../images/submit_button.png");
+  background: url("../images/submit_button.png") no-repeat center top;
   cursor: pointer;
-  float: right;
   margin-top: 25px;
 }
 
@@ -436,7 +436,6 @@ body {
   background-image: url("../images/story_nadpis.png");
   width: 234px;
   height: 74px;
-  margin-top: 50px;
 }
 
 #story-button2 {
@@ -454,17 +453,22 @@ body {
 }
 
 #blog {
-  width: 894px;
-  height: 568px;
-  background: url("../images/peng.png");
-  margin-left: 55px;
+  max-width: 894px;
+  min-height: 640px;
+  width: 100%;
+  background: url("../images/peng.png") no-repeat;
+  margin: 0 auto;
+  overflow: hidden;
+}
+#blog:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 #music {
-  float: right;
   background: url("../images/prehravac_text.png");
   cursor: pointer;
-  margin-top: 75px;
   width: 184px;
   height: 143px;
 }
@@ -491,52 +495,49 @@ body {
 }
 
 #text_blog {
-  position: absolute;
-  line-height: 24px;
-  font-size: 16px;
   text-align: justify;
   font-family: 'liebe_ruthlight';
   color: #362219;
-  width: 580px;
   margin-top: 76px;
   margin-left: 110px;
+  padding-right: 1.5em;
+  overflow: hidden;
 }
 
 #liska {
-  position: absolute;
-  margin-left: 275px;
-  margin-top: 370px;
   background: url("../images/img_liska.png");
   width: 330px;
   height: 240px;
+  margin: 0 auto;
 }
 
 #search {
-  width: 830px;
+  max-width: 830px;
   height: 56px;
-  background: url("../images/vyhladavac_obrys.png");
+  background: url("../images/vyhladavac_obrys.png") no-repeat center;
   cursor: pointer;
-  margin-left: 35px;
-  margin-bottom: 15px;
   text-align: center;
-  margin-top: 30px;
   line-height: 56px;
   font-size: 15px;
   font-family: 'liebe_ruthmedium';
   color: #362219;
+  margin: 0 auto 2em;
+  width: 100%;
 }
 
 .shop_item {
-  float: left;
   height: 187px;
   width: 187px;
   cursor: pointer;
-  margin-left: 30px;
-  margin-top: 30px;
+  margin-right: 26px;
+  margin-bottom: 30px;
   line-height: 20px;
   font-size: 15px;
   font-family: 'liebe_ruthregular';
   color: #362219;
+  display: inline-block;
+  text-align: left;
+  vertical-align: top;
 }
 
 .shop_item_img {
@@ -583,7 +584,6 @@ body {
   background: url("../images/pohyblive_kategorie_bez-textu.png");
   cursor: default;
   padding-top: 10px;
-  height: 177px;
 }
 
 #kat a {
@@ -595,10 +595,13 @@ body {
 }
 
 #wrapper_items {
-  margin-left: 50px;
-  height: 100%;
-  overflow-y: auto;
-  overflow-x: hidden;
+  margin: 0 auto;
+  text-align: center;
+}
+#wrapper_items:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 .green_pruh_item {
@@ -649,25 +652,30 @@ body {
 }
 
 #item_closed_in {
-  margin-top: 60px;
-  width: 800px;
   background: url("../images/menu_bg.jpg");
-  height: 650px;
-  padding-top: 50px;
-  padding-left: 50px;
-  padding-right: 50px;
+  padding: 3em 3em 0;
+}
+#item_closed_in:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
-#item_closed_in_left {
-  width: 332px;
-  float: left;
-  height: 374px;
+#item_closed_in_left:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+#item_closed_in_left img {
+  width: 100%;
+  height: auto;
 }
 
 #item_closed_in_right {
-  width: 371px;
-  float: right;
-  height: 374px;
+  overflow: hidden;
+}
+#item_closed_in_right p {
+  text-align: left;
 }
 
 #item_closed_in_right_x {
@@ -678,24 +686,17 @@ body {
   cursor: pointer;
 }
 
-#item_closed_in_right_left {
-  float: left;
-  width: 361px;
-}
-
 #item_closed_in_right_left_nadpis {
   width: 218px;
   height: 65px;
-  float: left;
   background: url("../images/sign.png") no-repeat;
 }
 
 #item_closed_in_right_left_text {
   margin-top: 15px;
   width: 361px;
-  height: 263px;
-  float: left;
-  background: url("../images/text.png") no-repeat;
+  height: 130px;
+  background: url("../images/text.png") no-repeat center bottom;
 }
 
 #butt_zoom_in {
@@ -712,80 +713,295 @@ body {
   float: right;
 }
 
+.product-gallery__controls {
+  display: inline-block;
+}
+.product-gallery__controls:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 #arr_left {
   width: 10px;
   height: 20px;
-  margin-top: 3px;
   background: url("../images/arrow_left.png");
-  float: left;
-  margin-left: 90px;
+  display: inline-block;
+  vertical-align: -15%;
 }
 
 #cislovanie {
   width: 39px;
   height: 32px;
   background: url("../images/cislovanie.png");
-  float: left;
-  margin-left: 22px;
+  display: inline-block;
+  margin: 0 1em;
+  vertical-align: middle;
 }
 
 #arr_right {
   width: 10px;
   height: 20px;
-  margin-top: 3px;
   background: url("../images/arrow_right.png");
-  float: right;
-  margin-right: 90px;
+  display: inline-block;
+  vertical-align: -15%;
 }
 
 #thing_nummer_zehn {
-  width: 800px;
-  height: 88px;
-  float: left;
-  margin-top: 25px;
+  max-width: 800px;
+  width: 100%;
+}
+#thing_nummer_zehn:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 #add_comment {
-  width: 329px;
+  max-width: 334px;
+  width: 100%;
   height: 87px;
   background: url("../images/add_comment.png");
   float: left;
   padding-left: 5px;
+  margin-top: 25px;
+  margin-right: 2em;
 }
 
 #tri_veci {
-  width: 401px;
-  height: 88px;
-  background: url("../images/button_menu.png");
-  float: right;
+  max-width: 401px;
+  width: 100%;
+  max-height: 88px;
+  background: url("../images/button_menu.png") no-repeat;
+  float: left;
+  background-size: contain !important;
+  margin-top: 25px;
 }
 
 #thing_nummer_elf {
-  width: 800px;
-  height: 133px;
-  float: left;
   margin-top: 35px;
+  text-align: center;
 }
 
 #elf_submit {
   width: 179px;
   height: 34px;
   background: url("../images/submit.png");
-  float: left;
-  margin-left: 77px;
+  display: inline-block;
 }
 
 #elf_basket {
   width: 133px;
   height: 44px;
   background: url("../images/basket_total.png");
-  float: left;
-  margin-left: 142px;
+  display: inline-block;
 }
 
 #elf_goto {
   width: 171px;
   height: 29px;
   background: url("../images/go_to_basket.png");
-  float: right;
+  display: inline-block;
+}
+
+@media screen and (min-width: 64em) {
+  body {
+    min-height: 760px;
+    overflow-y: scroll;
+  }
+
+  #menu {
+    width: 277px;
+    bottom: 0;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 20;
+  }
+
+  #menu_up a {
+    width: 100%;
+    height: 289px;
+    box-sizing: border-box;
+    margin-top: 3.5em;
+  }
+
+  #content {
+    min-height: 100%;
+    margin-left: 277px;
+  }
+
+  .l-container {
+    height: 100%;
+  }
+
+  .l-fixed-nav {
+    position: fixed;
+    bottom: 2.5em;
+    left: 6.25em;
+  }
+
+  #wrapper_items, #contact-us {
+    padding: 1.5em 2em;
+  }
+}
+@media screen and (max-width: 63.9375em) {
+  #menu_up a {
+    margin-top: 1em;
+  }
+
+  #content {
+    min-height: 760px;
+  }
+
+  .l-fixed-nav {
+    text-align: center;
+    border-top: 1px solid rgba(210, 180, 140, 0.75);
+    padding: 1em 0;
+    margin-top: 1em;
+  }
+  .l-fixed-nav br {
+    display: none;
+  }
+
+  #basket {
+    display: inline-block;
+  }
+
+  #language {
+    display: inline-block;
+    margin-left: 1.5em;
+  }
+}
+@media screen and (min-width: 48.0625em) {
+  #item_closed_in_left {
+    float: left;
+    max-width: 332px;
+  }
+
+  #item_closed_in_right {
+    padding-left: 1.5em;
+  }
+
+  #contact-left {
+    width: 49%;
+    float: left;
+  }
+
+  #contact-right {
+    width: 49%;
+    float: right;
+    background: url(../images/line.png) left 54px no-repeat;
+    padding-left: 20px;
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 48em) {
+  #item_closed_in_right {
+    margin-top: 1em;
+  }
+}
+@media screen and (max-width: 48em) and (min-width: 36.3125em) {
+  #bryle_left {
+    left: 22.5%;
+  }
+
+  #bryle_right {
+    right: 25%;
+  }
+
+  #outfit_left {
+    left: 10%;
+  }
+
+  #outfit_right {
+    right: 10%;
+  }
+}
+@media screen and (max-width: 63.9375em) and (min-width: 36.3125em) {
+  #menu:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  #menu_up {
+    float: left;
+    width: 25%;
+    min-width: 130px;
+  }
+
+  #menu_down {
+    padding-top: 1.75em;
+  }
+
+  #menu_entries a {
+    display: inline-block;
+  }
+  #menu_entries a + a {
+    margin-left: 1em;
+  }
+
+  #item_closed_in {
+    padding: 2em;
+    padding-bottom: 0;
+  }
+
+  #wrapper_items, #contact-us {
+    padding: 1.25em 1.5em;
+  }
+}
+@media screen and (min-width: 36.3125em) {
+  #elf_submit {
+    float: left;
+  }
+
+  #elf_goto {
+    float: right;
+  }
+
+  #music {
+    float: right;
+    margin-top: 75px;
+  }
+
+  #contact-text2-wrapper, #contact-text3-wrapper {
+    padding-right: 150px;
+  }
+
+  #mail_add, #mail_subj, #mail_mess {
+    max-width: 403px;
+  }
+
+  #mail_submit {
+    max-width: 402px;
+  }
+}
+@media screen and (max-width: 36.25em) {
+  #music {
+    display: none;
+  }
+
+  #item_closed_in {
+    padding: 1em;
+    padding-bottom: 0;
+  }
+
+  .game-buttons, #make_outfit, #outfit_button, #podmenu_game, #podmenu_game_shortcut, #skip {
+    display: none;
+  }
+
+  #wrapper_items, #contact-us {
+    padding: 1em;
+  }
+
+  #contact-text2-wrapper, #contact-text3-wrapper {
+    background-position: center 20px;
+    padding-top: 220px;
+  }
+
+  #story-button2, #story-button3 {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
