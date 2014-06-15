@@ -3,44 +3,47 @@ $title = "Hot";
 include("./header.php"); 
 ?>
 <body>
-  <div id="menu" style="min-height: 100% !important">
-    <div id="menu_up">
-      <a href="./">
-        <img src="./img/logo.png" alt="Roe&Doe logo" id="logo">
-      </a>
-    </div>
-    <div id="menu_down">
-      <div id="menu_entries">
-        <a href="/">{ home }</a><br>
-        <a href="/shop">E-SHOP</a><br>
-        <a href="/blog">BLOG</a><br>
-        <a href="/story">STORY</a><br>
-        <a href="/contact-us">CONTACT US</a><br>
-      </div>
-      <div id="basket">
-        BASKET<br>
-        0,00 €
-      </div>
-      <div id="language">
+  <div class="l-container">
+  <div id="menu">
+      <div id="menu_up">
         <a href="./">
-          <div id="english">EN</div>
-        </a>
-        <a href="./">
-          <div id="slovak">SK</div>
+          <img src="images/logo.png" alt="Roe&Doe logo" id="logo">
         </a>
       </div>
+      <div id="menu_down">
+        <div id="menu_entries">
+          <a href="/">{ home }</a>
+          <a href="/shop">E-SHOP</a>
+          <a href="/blog">BLOG</a>
+          <a href="/story">STORY</a>
+          <a href="/contact-us">CONTACT US</a>
+        </div>
+      </div>
+      <nav class="l-fixed-nav">
+        <div id="basket">
+          BASKET<br>
+          0,00 €
+        </div>
+        <div id="language">
+          <a href="./">
+            <div id="english">EN</div>
+          </a>
+          <a href="./">
+            <div id="slovak">SK</div>
+          </a>
+        </div>
+      </nav>
     </div>
-  </div>
-  <div id="content" style="min-height: 100% !important">
-    <div id="contact-us" style="margin-top: 0 !important; height: 100% !important; overflow: hidden">
+  <div id="content">
+    <div id="contact-us">
       <div id="wrapper_items">
-        <form  action="search" method="post">
+        <form action="search" method="post">
           <input placeholder="...SEARCH..." type="text" name="search" id="search" />
         </form>
         <div class="shop_item" id="kat_hot">
-          <a href="./" style="color: #53b164">{ the newest }</a>
+          <a href="./">{ the newest }</a>
           <a href="./hot-stuff/bestsellers">BESTSELLERS</a>
-          <a href="./hot-stuff/special-offer" style="margin-top: 10px">SPECIAL OFFER</a>
+          <a href="./hot-stuff/special-offer">SPECIAL OFFER</a>
           <a href="./hot-stuff/popular">POPULAR </a>
         </div>
         <div class="shop_item">
@@ -338,6 +341,7 @@ include("./header.php");
         </div>
       </div>
     </div>    
+  </div>
   </div>
 </body>
 </html>
