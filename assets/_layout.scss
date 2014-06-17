@@ -2,6 +2,7 @@ $grid-columns: 12;
 $portrait-col: 6;
 $phone-col: 2;
 
+$widescreen: new-breakpoint(min-width em(1680));
 $desktop: new-breakpoint(min-width em(1024));
 $mobile: new-breakpoint(max-width em(1023));
 $tablet: new-breakpoint(max-width em(1023) min-width em(581));
@@ -17,6 +18,13 @@ $phone: new-breakpoint(max-width em(580));
 $phone-landscape: new-breakpoint(max-width em(580) min-width em(321), $phone-col);
 $phone-portrait--before: new-breakpoint(min-width em(321));
 $phone-portrait: new-breakpoint(max-width em(320));
+
+@include media($widescreen) {
+	#bryle_left {left: 40%; }
+	#bryle_right {right: 40%; }
+	#outfit_left {left: 35%; }
+	#outfit_right {right: 35%; }
+}
 
 @include media($desktop) {
 	body {min-height: 760px; overflow-y: scroll; }

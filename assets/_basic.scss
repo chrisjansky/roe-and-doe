@@ -51,10 +51,10 @@ p {line-height: 1.5; }
 #outfit_button {width: 212px; height: 145px; background: url('../images/outfit_button.png'); cursor: pointer; position: absolute;
 	right: 5%; bottom: 3em;}
 .game-buttons {width: 40px; height: 40px; position: absolute; cursor: pointer; z-index: 4; padding: 1.5em; background-repeat: no-repeat; }
-#bryle_left {background-image: url('../images/left_button.png'); bottom: 70%; left: 32.5%; }
-#bryle_right {background-image: url('../images/right_button.png'); bottom: 70%; right: 35%; }
-#outfit_left {background-image: url('../images/left_button.png'); bottom: 25%; left: 20%; }
-#outfit_right {background-image: url('../images/right_button.png'); bottom: 25%; right: 20%; }
+#bryle_left {background-image: url('../images/left_button.png'); bottom: 550px; left: 32.5%; }
+#bryle_right {background-image: url('../images/right_button.png'); bottom: 550px; right: 35%; }
+#outfit_left {background-image: url('../images/left_button.png'); bottom: 275px; left: 20%; }
+#outfit_right {background-image: url('../images/right_button.png'); bottom: 275px; right: 20%; }
 
 #podmenu_game, .game-buttons, #outfit_button {visibility: hidden}
 

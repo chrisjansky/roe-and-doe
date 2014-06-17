@@ -287,25 +287,25 @@ p {
 
 #bryle_left {
   background-image: url("../images/left_button.png");
-  bottom: 70%;
+  bottom: 550px;
   left: 32.5%;
 }
 
 #bryle_right {
   background-image: url("../images/right_button.png");
-  bottom: 70%;
+  bottom: 550px;
   right: 35%;
 }
 
 #outfit_left {
   background-image: url("../images/left_button.png");
-  bottom: 25%;
+  bottom: 275px;
   left: 20%;
 }
 
 #outfit_right {
   background-image: url("../images/right_button.png");
-  bottom: 25%;
+  bottom: 275px;
   right: 20%;
 }
 
@@ -804,6 +804,23 @@ p {
   display: inline-block;
 }
 
+@media screen and (min-width: 105em) {
+  #bryle_left {
+    left: 40%;
+  }
+
+  #bryle_right {
+    right: 40%;
+  }
+
+  #outfit_left {
+    left: 35%;
+  }
+
+  #outfit_right {
+    right: 35%;
+  }
+}
 @media screen and (min-width: 64em) {
   body {
     min-height: 760px;
